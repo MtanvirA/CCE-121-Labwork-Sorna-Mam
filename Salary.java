@@ -1,12 +1,7 @@
 class Employee {
-    String name;
-    double salary;
-    Employee(String name, double salary) {
-        this.name = name;
-        this.salary = salary;
-    }
+    int salary=50000;
     void work() {
-        System.out.println(name + " is working.");
+        System.out.println("John is working.");
     }
     double getSalary() {
         return salary;
@@ -14,28 +9,25 @@ class Employee {
 }
 
 class HRManager extends Employee {
-    HRManager(String name, double salary) {
-        super(name, salary);
-    }
-
     void work() {
-        System.out.println(name + " is managing HR tasks.");
+        System.out.println("Alice is managing HR tasks.");
     }
-    void addEmployee(String employeeName) {
-        System.out.println(name + " added a new employee: " + employeeName);
+    void addEmployee() {
+        System.out.println("Alice added a new employee: Bob");
     }
 }
 
 public class Salary {
-
     public static void main(String[] args) {
-        Employee emp1 = new Employee("John", 50000.0);
+        Employee emp1 = new Employee();
         emp1.work();
         System.out.println("Salary: $" + emp1.getSalary());
+
         System.out.println();
-        HRManager hr = new HRManager("Alice", 70000.0);
+
+        HRManager hr = new HRManager();
         hr.work();
-        hr.addEmployee("Bob");
+        hr.addEmployee();
         System.out.println("Salary: $" + hr.getSalary());
     }
 }
