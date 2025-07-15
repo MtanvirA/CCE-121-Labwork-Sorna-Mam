@@ -10,7 +10,6 @@ class Cat extends Animal {
     }
 }
 
-// Main class
 public class ClassOverride {
     public static void main(String[] args) {
         Animal myAnimal = new Animal(); 
